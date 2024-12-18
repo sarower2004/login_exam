@@ -6,12 +6,16 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import LayoutOne from './Layouts/LayoutOne'
 import Home from './Pages/Home'
 import Login from './Component/Login'
+import Register from './Component/Register/Register'
+import app from './firebase.config'
 
 function App() {
   const myroute = createBrowserRouter(createRoutesFromElements(
   <Route>  
       <Route path='/' element= {<LayoutOne/>}>
           <Route index element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          
       </Route>
   </Route>
   )
